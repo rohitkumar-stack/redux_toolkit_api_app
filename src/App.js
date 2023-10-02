@@ -6,7 +6,6 @@ import Home from './Components/Home';
 import Register from './Components/Register';
 import Edit from './Components/Edit';
 import Details from './Components/Details';
-import Game from './Components/GamePage';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 
@@ -21,7 +20,6 @@ function App() {
                <Route exact path="/register" element={<Register/>} />
                <Route exact path="/edit/:id" element={<Edit/>} />
                <Route exact path="/view/:id" element={<Details/>} />
-               <Route exact path="/gamePage" element={<Game/>} />
             </Routes>
            
           </>

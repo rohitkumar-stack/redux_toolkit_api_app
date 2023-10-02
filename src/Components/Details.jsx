@@ -11,44 +11,13 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { useParams } from 'react-router-dom';
 import axios from "axios";
 
-
-
-
  const Details = () => {
+     const [data, setData] = useState([]);
+
 // Start Get Data Userdeatills
      const {id} = useParams("");
      console.log(id);
-
-    
-  const [data, setData] = useState([]);
-  
-
-     // const getdata = async() =>{
-     //      const res = await fetch(`https://api.slingacademy.com/v1/sample-data/photos/${id}`,{
-     //          method:"GET",
-     //          headers:{
-     //              "Content-Type": "application/json"
-     //          }
-     //      });
-  
-     //      const data = await res.json();
-     //      console.log(data);
-  
-     //      if(res.status === 422|| !data){
-     //          console.log("error");
-     //      }else{
-     //          setUserdata(data)
-     //          console.log("Get Data Sucssfully!!");
-     //      }
-     //  }
-
-
-     //  useEffect(() =>{
-     //       getdata();
-     //  },[]);
-
-
-
+ 
      useEffect(() => {
            
           axios.get(`https://api.slingacademy.com/v1/sample-data/photos/${id}`, {
@@ -66,13 +35,7 @@ import axios from "axios";
       }, [])
   
       console.log(data," nnkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
-
-
 // End Get Data Userdeatills
-
-
-
-
 
   return (
     <>
